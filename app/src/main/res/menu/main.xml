@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.slidenerd.exmples.five.cards.MainActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        android:title="@string/action_settings" />
+    <item
+        android:id="@+id/next"
+        android:title="nextActivity"
+        android:icon="@drawable/ic_action_forward"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+
+        />
+
+
+
+</menu>
+
+
+
