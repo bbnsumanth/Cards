@@ -23,9 +23,17 @@ public class MainActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationDrawerFragment navDF = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
+        //with this navigation drawer basic setup is done
+        //next,we want to set sync btw appbar and navigation drawer
+        //this can be done directly here,but if we want to use same navigation drawer for many activities,
+        // its better to write that code in navigation drawer fragment
+        navDF.setSync(drawerLayout,toolbar);//we are passing toolbar and drawer layout obj from activity to navigation drawer fragment.
 
-        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        drawerFragment.setUp(drawerLayout,toolbar);
+
+
+
     }
 
 

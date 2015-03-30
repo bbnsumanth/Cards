@@ -32,20 +32,22 @@
             android:text="@string/hello_world"
             android:textSize="35dp" />
 
+
+
+
     </RelativeLayout>
 
+    <!-- should add navigation drawer as next element-->
     <fragment
-        android:id="@+id/navigation_drawer"
         android:layout_width="280dp"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
-        app:layout="@layout/fragment_navigation_drawer"
+        android:id="@+id/navigation_drawer"
+        app:layout="@layout/fragment_navigation"
+        android:layout_gravity="start"
         android:name="com.slidenerd.exmples.five.cards.NavigationDrawerFragment"
-        tools:layout="@layout/fragment_navigation_drawer">
+        tools:layout="@layout/fragment_navigation">
 
         </fragment>
-
-
 
 
 </android.support.v4.widget.DrawerLayout>
